@@ -6,13 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/prev"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="100dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/play_pause"
+        app:srcCompat="@android:drawable/ic_media_rew" />
+
+    <ImageView
+        android:id="@+id/play_pause"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/next"
+        app:layout_constraintStart_toEndOf="@+id/prev"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/play_pause"
+        app:srcCompat="@android:drawable/ic_media_ff" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
